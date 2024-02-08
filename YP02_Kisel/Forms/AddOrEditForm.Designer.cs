@@ -214,6 +214,7 @@
             this.typeMaterialCmb.Name = "typeMaterialCmb";
             this.typeMaterialCmb.Size = new System.Drawing.Size(121, 36);
             this.typeMaterialCmb.TabIndex = 22;
+            this.typeMaterialCmb.SelectedIndexChanged += new System.EventHandler(this.typeMaterialCmb_SelectedIndexChanged);
             // 
             // unitCmb
             // 
@@ -227,6 +228,7 @@
             this.unitCmb.Name = "unitCmb";
             this.unitCmb.Size = new System.Drawing.Size(121, 36);
             this.unitCmb.TabIndex = 23;
+            this.unitCmb.SelectedIndexChanged += new System.EventHandler(this.unitCmb_SelectedIndexChanged);
             // 
             // inpackNumeric
             // 

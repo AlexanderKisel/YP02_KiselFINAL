@@ -157,5 +157,15 @@ namespace YP02_Kisel.Forms
         {
 
         }
+
+        private void unitCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void typeMaterialCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

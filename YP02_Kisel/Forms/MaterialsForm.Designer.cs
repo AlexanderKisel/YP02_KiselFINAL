@@ -45,6 +45,7 @@
             this.filterCmb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.spisokBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.materialDgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -254,11 +255,24 @@
             this.spisokBtn.UseVisualStyleBackColor = false;
             this.spisokBtn.Click += new System.EventHandler(this.spisokBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(169)))), ((int)(((byte)(171)))));
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(860, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(198, 53);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Расчет материалов";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MaterialsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 548);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.spisokBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filterCmb);
@@ -301,5 +315,6 @@
         private Label label1;
         private ComboBox sortCmb;
         private Button spisokBtn;
+        private Button button1;
     }
 }

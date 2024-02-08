@@ -344,5 +344,13 @@ namespace YP02_Kisel
             Hide();
             maketForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RaschetForm raschetForm = new RaschetForm();
+            raschetForm.Closed += formClosed;
+            Hide();
+            raschetForm.Show();
+        }
     }
 }
