@@ -78,17 +78,23 @@ namespace YP02_Kisel
 
         private void DelBtn_Click(object sender, EventArgs e)
         {
-            using (Kisel_var_5Context db = new Kisel_var_5Context())
+            
+            if (MessageBox.Show("Вы действительно хотите удалить запись?","Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                var id = Int32.Parse(materialDgv.Rows[materialDgv.SelectedRows[0].Index].Cells[0].Value.ToString());
-                var selected = db.Materials.FirstOrDefault(x => x.Id== id);
-                if (selected != null)
+                using (Kisel_var_5Context db = new Kisel_var_5Context())
                 {
-                    db.Materials.Remove(selected);
-                    db.SaveChanges();
-                    UpdateDgv();
+                    var id = Int32.Parse(materialDgv.Rows[materialDgv.SelectedRows[0].Index].Cells[0].Value.ToString());
+                    var selected = db.Materials.FirstOrDefault(x => x.Id == id);
+                    if (selected != null)
+                    {
+                        db.Materials.Remove(selected);
+                        db.SaveChanges();
+                        UpdateDgv();
+                    }
+                    ExitLbl.Enabled = true;
                 }
             }
+            ExitLbl.Enabled = true;
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
@@ -130,10 +136,22 @@ namespace YP02_Kisel
         {
             Show();
             UpdateDgv();
-            UserLbl.Text = ForAutoriz.Role.ToString();
+            if(ForAutoriz.Role.ToString() == "")
+            {
+                UserLbl.Text = "Пользователь не авторизован";
+            }
+            else
+            {
+                UserLbl.Text = ForAutoriz.Role.ToString();
+            }
+
             if (UserLbl.Text == "Пользователь не авторизован")
             {
-                ExitLbl.Visible = false;
+                AddBtn.Enabled = false;
+                EditBtn.Enabled = false;
+                DelBtn.Enabled = false;
+                ExitLbl.Enabled = false;
+                AutorithashionBtn.Enabled = true;
             }
             else if (UserLbl.Text == "User")
             {

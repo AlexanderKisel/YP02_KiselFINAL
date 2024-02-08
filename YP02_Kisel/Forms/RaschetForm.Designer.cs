@@ -259,7 +259,7 @@
             this.Controls.Add(this.raschBtn);
             this.Controls.Add(this.backBtn);
             this.Name = "RaschetForm";
-            this.Text = "Raschet";
+            this.Text = "Расчет";
             ((System.ComponentModel.ISupportInitialize)(this.dlinaNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shirinaNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kolvoNumeric)).EndInit();

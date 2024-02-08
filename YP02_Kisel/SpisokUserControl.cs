@@ -26,13 +26,13 @@ namespace YP02_Kisel
             inPackTxt.Text = material.CountInPack.ToString();
             inSkladTxt.Text = material.CountInStock.ToString();
             priceTxt.Text = material.Cost.ToString();
-            if(material.Image.ToString() != "")
+            if(material.Image.ToString() != "" && material.Image.ToString() != "\\materials\\")
             {
-                pictureBox1.Image = Image.FromFile($"X:\\УП.02_Кисель\\Picture\\{material.Image}");
+                pictureBox1.Image = Image.FromFile(Directory.GetCurrentDirectory() + material.Image);
             }
             else
             {
-                pictureBox1.Image = Image.FromFile($"X:\\УП.02_Кисель\\Picture\\materials\\picture.png"); ;
+                pictureBox1.Image = Image.FromFile($"materials\\picture.png"); ;
             }
         }
 
